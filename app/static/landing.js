@@ -33,6 +33,12 @@ const imageData = [
         title: "Waxing Crescent",
         lang: "en",
         spec: "200mm f/4"
+    },
+    {
+        path: 'static/images/panda.jpg',
+        title: "红山动物园 江苏",
+        lang: "ch",
+        spec: "200mm f/4"
     }
 ]
 
@@ -60,6 +66,9 @@ const observer = new IntersectionObserver((cards) => {
             } 
             else if(card.target === cardDivs[2]) {
                 infoIndex = 2;
+            }
+            else if(card.target === cardDivs[3]) {
+                infoIndex = 3;
             }
 
             /**
