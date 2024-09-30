@@ -1,0 +1,219 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Reforma';
+    src: url("./fonts/Reforma1918-Blanca.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    src: url("./fonts/Montserrat-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chinese';
+    src: url("./fonts/LiuJianMaoCao-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "Monserrat", sans-serif;
+    position: fixed;
+    width: 100%;
+    background: transparent; /* Fully transparent background */
+    padding: 10px 0;
+    z-index: 100; /* Ensure navbar stays above the content */
+    top: 0;
+}
+
+.navbar .container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #566656;
+    color: white;
+    border-radius: 4px;
+}
+
+
+/* Main */
+
+main {
+    display: flex;
+}
+
+/* Left-half Cards */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    width: 60vw;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7); /* Shadow on the right */
+    position: relative;
+    z-index: 1;
+    background-color: #7b927b;
+}
+
+.card {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.img-info{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    padding: 100px;
+}
+
+.img-info .cntitle{
+    font-family: "Chinese";
+    font-size: 50px;
+}
+
+.img-info .entitle{
+    font-family: "Reforma", serif;
+    font-size: 40px;
+}
+
+.img-info .specs{
+    font-family: "Monserrat", sans-serif;
+    font-size: 20px;
+}
+
+
+/* Right-half Images*/
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    width: 40vw;
+    background-color: rgb(24, 24, 24);
+    position: fixed;
+    right: 0;
+}
+
+.image {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#image {
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+
+/* Main Content */
+.container{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.intro {
+    padding: 100px;
+}
+
+.intro h1 {
+    font-size: 100px;
+    text-align: left;
+    font-family: "Reforma", serif;
+    font-weight: 300;
+}
+
+.cname{
+    font-size: 80px;
+    font-family: "Chinese";
+    display: flex;
+    writing-mode: vertical-rl;
+    padding-top: 100px;
+    padding-right: 50px;
+}
+
+.intro p {
+    text-align: left;
+    font-size: 30px;
+    font-family: "Monserrat", sans-serif;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+
+.info {
+    padding: 100px;
+}
+
+.info h1 {
+    font-size: 50px;
+    text-align: left;
+    font-family: "Reforma", serif;
+    font-weight: 300;
+}
+
+.info .entry {
+    text-align: left;
+    font-size: 30px;
+    font-family: "Monserrat", sans-serif;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+
+
+/* Links */
+a {
+    color: #0073e6;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card-container">
+
+    <!-- Fixed info div for picture -->
+    <div id="img-info" class="img-info">
+        
+    </div>
+
+    <div id="home" class="card">
+        <div class="container">
+            <div class="intro">
+                <h1>Ethan Dai</h1>
+                <p>Machine Learning</p>
+                <p>Photography</p>
+                <p>Piano</p>
+            </div>
+            <div class="cname">
+                戴逸风
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="card">
+        <div class="info">
+            <h1>About</h1>
+            <div class="entry">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="card">
+        <div class="info">
+            <h1>Projects</h1>
+            <div class="entry">
+                <div>
+                    LSTM-based models for sentiment analysis
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="image-container">
+    <div id="image-div" class="image">
+        <img id="image" src="">
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='landing.js') }}"></script>
+{% endblock %}
