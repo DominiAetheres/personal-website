@@ -154,3 +154,12 @@ const observer = new IntersectionObserver((cards) => {
 cardDivs.forEach(card => {
     observer.observe(card);
 })
+
+
+/**
+ * Loading animation logic
+ */
+window.onload = function() {
+    // Hide the loader
+    document.getElementById("loader").style.display = "none";
+  };
