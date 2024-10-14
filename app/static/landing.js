@@ -2,19 +2,42 @@
  * Card scrolling behaviour
  */
 
+const sectionIds = [
+    "home",
+    "about",
+    "projects",
+    "contact"
+]
+
+const scrollDivs = []
+
+for(id of sectionIds){
+    scrollDivs.push(document.getElementById(id));
+}
+
+let currentIndex = 0;
 
 window.addEventListener('wheel', (event) => {
-    event.preventDefault();
+
     const deltaY = event.deltaY;
 
-    // Scroll the container based on wheel delta
-    window.scrollBy({
-        top: deltaY > 0 ? window.innerHeight : -window.innerHeight, // Scroll full height
-        behavior: 'smooth' // Smooth scroll effect
+    // Scroll down
+    if (deltaY > 0 && currentIndex < scrollDivs.length - 1) {
+        currentIndex++;
+    }
+    // Scroll up
+    else if (deltaY < 0 && currentIndex > 0) {
+        currentIndex--;
+    }
+
+    scrollDivs[currentIndex].scrollIntoView({
+        behavior: 'smooth'
     });
 });
 
-
+/**
+ * Data to be displayed when scrolling images on right
+ */
 const imageData = [
     {
         path: "static/images/wall.jpg",
