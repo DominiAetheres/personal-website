@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card-container-full">
+    <div class="card">
+        <div class="container">
+              <div class="info">
+                <h1>Architectural ControlNet Generation Demo</h1>
+                <br><br>
+                <div class="image-row">
+                    <img id="demo-image" src="{{ url_for('static', filename='images/demo/demo.png') }}" alt="Demo Image">
+                    <img id="generated-image" src="{{ url_for('static', filename='images/demo/output.png') }}" alt="Output Image">
+                </div>
+                <br>
+                <button id="switch-btn" class="generate-button">
+                    Generate
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='demo.js') }}"></script>
+{% endblock %}
+
+

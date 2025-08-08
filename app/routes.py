@@ -8,3 +8,8 @@ from flask import render_template
 def landing():
 
     return render_template("landing.html")
+
+@app.route("/architectural-controlnet-demo")
+def demo():
+    
+    return render_template("demo.html")
